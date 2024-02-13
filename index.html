@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="stylesheet.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="text">
+          Hej Julek!
+          <br/>
+          Chcesz zostać moją walentynką???
+          <br/>
+          proszeeee
+        </div>
+        <div id="photo">
+          <img src="cat.jpg" rel="usmieszek" width="500px">
+        </div>
+        <div class="buttons">
+          <button id="yes" onclick="location.href ='index2.html'">Tak</button>
+          <button id="nope" onclick="change()" >Nie</button>
+        </div>
+
+    </div>
+    <script>
+      var no = document.getElementById('nope');
+      var yes = document.getElementById('yes')
+
+      function change() {
+        var i = Math.floor(Math.random() * 700) + 1;
+        var j = Math.floor(Math.random() * 1500) + 1;
+        no.style.left = i + "px";
+        no.style.top = j + "px";
+
+        var currentWidth = yes.offsetWidth;
+        var currentHeight = yes.offsetHeight
+        yes.style.width = currentWidth + 20 + "px";
+        yes.style.height = currentHeight + 10 + "px";
+      } 
+    </script>
+  </body>
+</html>
